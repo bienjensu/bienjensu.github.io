@@ -305,6 +305,10 @@ li::marker {
     display: none;
 }
 
+scrollbar {
+    display: none;
+}
+
 input, button, textarea {
     border: var(--border-thickness) solid var(--text-color);
     padding:
