@@ -115,7 +115,7 @@ function checkOffsets() {
 const updateColors = () => {
     const colors = ['green', 'red', 'blue', 'yellow'];
     const updates = document.getElementsByClassName("colorme");
-    const hrs = document.querySelectorAll("hr");
+    const hrs = document.querySelectorAll("hr, td, th, tr, table");
     const color = colors[Math.floor(Math.random() * colors.length)];
     for (const u of updates) {
         u.style.backgroundColor = color;
@@ -130,6 +130,7 @@ const updateColors = () => {
     console.log(hrs);
     for (const hr of hrs) {
         hr.style.setProperty('--borderColor', color);
+        hr.style.borderColor = color;
     }
 }
 updateColors();
