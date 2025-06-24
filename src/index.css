@@ -14,6 +14,7 @@
     --font-weight-normal: 500;
     --font-weight-medium: 600;
     --font-weight-bold: 600;
+    --highlight-color: black;
 
     font-family: var(--font-family);
     font-optical-sizing: auto;
@@ -544,3 +545,9 @@ label input {
   text-align: center;
   z-index: 1000;
 }
+
+.footer > a {text-decoration: none;}
+.footer > a:link {color: var(--highlight-text-color);}
+.footer > a:visited {color: var(--highlight-text-color);}
+.footer > a:hover {color: var(--highlight-text-color);}
+.footer > a:active {color: var(--highlight-text-color);}

@@ -132,5 +132,13 @@ const updateColors = () => {
         hr.style.setProperty('--borderColor', color);
         hr.style.borderColor = color;
     }
+
+    var r = document.querySelector(':root');
+    r.style.setProperty('--highlight-color', color);
+    if (color == 'yellow') {
+       r.style.setProperty('--highlight-text-color', 'black');
+    } else {
+        r.style.setProperty('--highlight-text-color', 'white');
+    }
 }
 updateColors();
