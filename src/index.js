@@ -118,6 +118,11 @@ const updateColors = () => {
     const color = colors[Math.floor(Math.random() * colors.length)];
     for (const u of updates) {
         u.style.backgroundColor = color;
+        if (color == 'yellow') {
+            u.style.color = 'black';
+        } else {
+            u.style.color = 'white';
+        }
     }
 }
 updateColors();
