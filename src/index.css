@@ -15,7 +15,6 @@
     --font-weight-medium: 600;
     --font-weight-bold: 600;
     --highlight-color: black;
-
     font-family: var(--font-family);
     font-optical-sizing: auto;
     font-weight: var(--font-weight-normal);
@@ -226,6 +225,7 @@ details {
     /*border: var(--border-thickness) dashed var(--text-color);*/
     /*padding: calc(var(--line-height) - var(--border-thickness)) 1ch;*/
     /*margin-bottom: var(--line-height);*/
+    margin: var(--line-height);
 }
 
 @keyframes blinker {
