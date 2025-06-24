@@ -140,5 +140,19 @@ const updateColors = () => {
     } else {
         r.style.setProperty('--highlight-text-color', 'white');
     }
+
+    const imgs = document.querySelectorAll("img");
+    console.log(imgs);
+    for (const i of imgs) {
+        if (color == 'red') {
+            i.setAttribute("class", "filter-red");
+        } else if (color == 'green') {
+            i.setAttribute("class", "filter-green");
+        }else if (color == 'blue') {
+            i.setAttribute("class", "filter-blue");
+        }else if (color == 'yellow') {
+            i.setAttribute("class", "filter-yellow");
+        }
+    }
 }
 updateColors();
