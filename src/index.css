@@ -206,27 +206,49 @@ img {
     color: var(--text-color-alt);
 }
 
+.details-inline {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
 details {
-    border: var(--border-thickness) solid var(--text-color);
-    padding: calc(var(--line-height) - var(--border-thickness)) 1ch;
-    margin-bottom: var(--line-height);
+    /*border: var(--border-thickness) dashed var(--text-color);*/
+    /*padding: calc(var(--line-height) - var(--border-thickness)) 1ch;*/
+    /*margin-bottom: var(--line-height);*/
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 summary {
     font-weight: var(--font-weight-medium);
     cursor: pointer;
 }
-details[open] summary {
-    margin-bottom: var(--line-height);
+
+details[open] > summary span {
+    /*margin-bottom: var(--line-height);*/
+    animation: none;
+    font-weight: 200;
+    display: none;
+}
+
+details > summary span {
+    /*margin-bottom: var(--line-height);*/
+    animation: blinker 1s step-start infinite;
+    font-weight: 50;
 }
 
 details ::marker {
     display: inline-block;
-    content: '▶';
+    content: '';
     margin: 0;
 }
 details[open] ::marker {
-    content: '▼';
+    content: '';
 }
 
 details :last-child {
