@@ -499,7 +499,9 @@ label input {
     color: white;
     background-color: red;
     z-index: 1000;
-    margin-top: calc(-1 * var(--line-height));
+    /*margin-top: calc(-1 * var(--line-height));*/
+    margin-top: 0;
+    top: 0;
     /*border-bottom: var(--border-thickness) double var(--text-color);*/
     left: 0;
     right: 0;

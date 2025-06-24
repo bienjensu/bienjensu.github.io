@@ -124,5 +124,6 @@ const updateColors = () => {
             u.style.color = 'white';
         }
     }
+    document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
 }
 updateColors();
