@@ -1,16 +1,9 @@
 @font-face {
-    font-family: 'VGA';
-    src: url('http://sciops.net/downloads/vga/VGAMedium.woff2') format('woff2'),
-        url('http://sciops.net/downloads/vga/VGAMedium.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: "BQN386";
-    src: url("../font/BQN386.woff2");
+    font-family: "Iosevka Body";
+    src: url("./src/font/iosevka-comfy-motion-fixed-normalsemilightupright.ttf")
 }
 :root {
-    --font-family: 'BQN386', monospace;
+    --font-family: "Iosevka Body", 'BQN386', monospace;
     --line-height: 1.20rem;
     --border-thickness: 2px;
     --text-color: #000;
