@@ -44,5 +44,13 @@ var song = Array(
 - Theodore Adorno`
 )
 
-var randomSong = song[Math.floor(Math.random() * song.length)];
-document.getElementsByClassName('quoteblock')[0].textContent = randomSong;
+var newQuote = () => {
+    var randomSong = song[Math.floor(Math.random() * song.length)];
+    document.getElementsByClassName('quoteblock')[0].textContent = randomSong;
+}
+
+setInterval(function() {
+    newQuote();
+}, 60 * 1000);
+
+newQuote()
