@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Iosevka Body";
-    src: url("./src/font/iosevka-comfy-motion-fixed-normalsemilightupright.ttf")
+    src: url("font/iosevka-comfy-motion-fixed-normalsemilightupright.ttf")
 }
 :root {
     --font-family: "Iosevka Body", 'BQN386', monospace;
