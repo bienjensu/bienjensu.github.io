@@ -255,6 +255,7 @@ figure {
     margin: calc(var(--line-height) * 2) 3ch;
     overflow-x: auto;
     overflow-y: hidden;
+
 }
 
 figcaption {
