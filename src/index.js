@@ -115,15 +115,21 @@ function checkOffsets() {
 const updateColors = () => {
     const colors = ['green', 'red', 'blue', 'yellow'];
     const updates = document.getElementsByClassName("colorme");
+    const hrs = document.querySelectorAll("hr");
     const color = colors[Math.floor(Math.random() * colors.length)];
     for (const u of updates) {
         u.style.backgroundColor = color;
+        u.style.borderColor = color;
         if (color == 'yellow') {
             u.style.color = 'black';
         } else {
             u.style.color = 'white';
         }
     }
-    document.querySelector('meta[name="theme-color"]').setAttribute("content", color);
+
+    console.log(hrs);
+    for (const hr of hrs) {
+        hr.style.setProperty('--borderColor', color);
+    }
 }
 updateColors();
