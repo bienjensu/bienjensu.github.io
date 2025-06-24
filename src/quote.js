@@ -41,7 +41,9 @@ var song = Array(
     `what is fixed is dead, what is not fixed is nothing
 - Paul Valéry`,
     `what appears as the positive is essentially the negative
-- Theodore Adorno`
+- Theodore Adorno`,
+    `hope is reactionary
+- Ray Brassier`
 )
 
 var newQuote = () => {
