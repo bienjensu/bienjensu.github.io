@@ -112,9 +112,12 @@ function checkOffsets() {
   }
 }
 
-const debugToggle = document.querySelector(".debug-toggle");
-function onDebugToggle() {
-  document.body.classList.toggle("debug", debugToggle.checked);
+const updateColors = () => {
+    const colors = ['green', 'red', 'blue', 'yellow'];
+    const updates = document.getElementsByClassName("colorme");
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    for (const u of updates) {
+        u.style.backgroundColor = color;
+    }
 }
-debugToggle.addEventListener("change", onDebugToggle);
-onDebugToggle();
+updateColors();
