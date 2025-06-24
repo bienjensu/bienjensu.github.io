@@ -1,17 +1,17 @@
 var song = Array(
-    `i do not know the rest<br>
+    `i do not know the rest
 - Évariste Galois`,
-    `to be attacked by the enemy is a good thing<br>
+    `to be attacked by the enemy is a good thing
 - Mao Zedong`,
-    `bombard the headquarters<br>
+    `bombard the headquarters
 - Mao Zedong`,
-    `there is chaos under heaven and the situation is excellent<br>
+    `there is chaos under heaven and the situation is excellent
 - Mao Zedong`,
-    `man infinitely surpasses man<br>
+    `man infinitely surpasses man
 - Blaise Pascal`,
-    `the real is rational<br>
+    `the real is rational
 - Georg Frederic Hegel`,
-    `great thoughts spring from the heart<br>
+    `great thoughts spring from the heart
 - Luc de Clapiers
 `,
     `we must welcome big concepts
