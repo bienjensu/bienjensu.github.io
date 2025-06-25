@@ -65,6 +65,7 @@ body {
 }
 
 .container {
+    gap: var(--line-height);
     position: relative;
     max-width: calc(min(80ch, 100%));
     line-height: var(--line-height);
@@ -234,7 +235,8 @@ img {
     image-rendering: pixelated;                 /* Universal support since 2021   */
     image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-    max-width: 60ch;
+    max-width: 55ch;
+    max-height: 55ch;
     margin: auto;
 }
 
@@ -283,10 +285,10 @@ details > summary span {
 }
 
 details > summary {
-  list-style: none;
+    list-style: none;
 }
 details > summary::-webkit-details-marker {
-  display: none;
+    display: none;
 }
 
 details ::marker {
@@ -319,6 +321,10 @@ pre, code {
 
 code {
     font-weight: var(--font-weight-medium);
+}
+
+blockquote {
+    margin: 2ch;
 }
 
 figure {
@@ -573,7 +579,7 @@ sup::after{
 .dots-6 { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPSdibGFjaycgLz4KPC9zdmc+"); background-repeat: repeat; }
 
 .diagonal-stripe-1 {
-        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzEnLz4KPC9zdmc+Cg=="); background-repeat: repeat;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzEnLz4KPC9zdmc+Cg=="); background-repeat: repeat;
 }
 
 .diagonal-stripe-2 { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"); background-repeat: repeat; }
