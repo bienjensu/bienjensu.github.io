@@ -68,14 +68,14 @@ body {
     position: relative;
     max-width: calc(min(80ch, 100%));
     line-height: var(--line-height);
-    margin-right: 2em;
+    margin: 0;
 }
 
 .with-sidebar {
     display: flex;
     flex-wrap: wrap;
     /* ↓ The default value is the first point on the modular scale */
-    gap: var(--line-height);
+    /*gap: var(--line-height);*/
     justify-content: space-between;
     align-items: flex-start;
 }
