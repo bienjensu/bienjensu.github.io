@@ -68,7 +68,7 @@ body {
     position: relative;
     max-width: calc(min(80ch, 100%));
     line-height: var(--line-height);
-    margin: 0;
+    margin-right: auto;
 }
 
 .with-sidebar {
@@ -76,29 +76,20 @@ body {
     flex-wrap: wrap;
     /* ↓ The default value is the first point on the modular scale */
     /*gap: var(--line-height);*/
-    justify-content: space-between;
+    justify-content: left;
     align-items: flex-start;
 }
 .with-sidebar > :first-child {
     /* ↓ The width when the sidebar _is_ a sidebar */
-    flex-basis: 0rem;
-    flex-grow: 1;
+    flex-basis: 20%;
+    flex-grow: 0;
 }
-.with-sidebar > :nth-child(2) {
+.with-sidebar > :last-child {
     /* ↓ Grow from nothing */
-    flex-basis: 0;
+    flex-basis: 0rem;
     flex-grow: 999;
     /* ↓ Wrap when the elements are of equal width */
-    min-inline-size: 20%;
-}
-
-@media screen and (max-width: 480px) {
-    :root {
-        font-size: 14px;
-    }
-    body {
-        padding: var(--line-height) 1ch;
-    }
+    min-inline-size: 30%;
 }
 
 h1, h2, h3, h4, h5, h6 {
