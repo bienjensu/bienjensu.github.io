@@ -15,6 +15,7 @@
     --font-weight-medium: 500;
     --font-weight-bold: 600;
     --highlight-color: black;
+    --font-size: 17px;
     font-family: var(--font-family);
     font-optical-sizing: auto; /* auto */
 
@@ -28,7 +29,7 @@
     font-weight: var(--font-weight-normal);
     font-style: normal;
     font-variant-numeric: tabular-nums lining-nums;
-    font-size: 17px;
+    font-size: var(--font-size);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -526,6 +527,17 @@ label input {
 
 .debug-toggle-label {
     text-align: right;
+}
+
+sup {
+    vertical-align: text-top;
+    font-weight: 100;
+}
+sup::before {
+    content: "[";
+}
+sup::after{
+    content: "]";
 }
 
 .smalldot { background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgo8cmVjdCB3aWR0aD0nNScgaGVpZ2h0PSc1JyBmaWxsPScjZmZmJy8+CjxyZWN0IHdpZHRoPScxJyBoZWlnaHQ9JzEnIGZpbGw9JyNjY2MnLz4KPC9zdmc+"); background-repeat: repeat; }
