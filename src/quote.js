@@ -50,7 +50,10 @@ var song = Array(
 
 var newQuote = () => {
     var randomSong = song[Math.floor(Math.random() * song.length)];
-    document.getElementsByClassName('quoteblock')[0].textContent = randomSong;
+    var blocks = document.getElementsByClassName('quoteme');
+    for (b of blocks) {
+        b.textContent = randomSong;
+    }
 }
 
 setInterval(function() {
