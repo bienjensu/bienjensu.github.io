@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="src/index.css" />
               </head>
   <body>
-    <marquee class="quoteblock colorme" onclick="updateColors()"></marquee>
+    <marquee class="quoteblock colorme" onclick="updateColors()" _="on mousedown halt the event"></marquee>
      <ul class="tree">
    <li>
      <details>
@@ -44,9 +44,10 @@
     </li>
  </ul>
  <div class="container">
-            <p>The WorldWideWeb (W3) is a wide-area hypermedia
-information retrieval initiative aiming to give universal access to a
-large universe of documents.</p>
+            <!--  -->
+<p>The WorldWideWeb (W3) is a wide-area hypermedia information retrieval
+initiative aiming to give universal access to a large universe of
+documents.</p>
 <pre style="margin: auto;">                    Visual   Anterior
                       axis   pole    Anterior
                          \\  |       chamber
@@ -88,4 +89,5 @@ best viewed in any browser
   </body>
   <script src="src/index.js"></script>
   <script src="src/quote.js"></script>
+  <script src="https://unpkg.com/hyperscript.org@0.9.14"></script>
 </html>

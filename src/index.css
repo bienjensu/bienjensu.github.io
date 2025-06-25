@@ -16,14 +16,14 @@
     --font-weight-bold: 600;
     --highlight-color: black;
     font-family: var(--font-family);
-    font-optical-sizing: none; /* auto */
+    font-optical-sizing: auto; /* auto */
 
     /* pixel fonts */
-    text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    -webkit-font-smoothing: none;
-    -moz-osx-font-smoothing: grayscale;
-    font-smooth: never;
+    /* text-size-adjust: none; */
+    /* -webkit-text-size-adjust: none; */
+    /* -webkit-font-smoothing: none; */
+    /* -moz-osx-font-smoothing: grayscale; */
+    /* font-smooth: never; */
 
     font-weight: var(--font-weight-normal);
     font-style: normal;
@@ -100,6 +100,7 @@ h1 {
     line-height: calc(2 * var(--line-height));
     margin-bottom: calc(var(--line-height) * 2);
     text-transform: uppercase;
+    display: none;
 }
 h2 {
     font-size: 1rem;
