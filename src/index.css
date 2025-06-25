@@ -282,6 +282,13 @@ details > summary span {
     font-weight: 50;
 }
 
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 details ::marker {
     display: inline-block;
     content: '';
