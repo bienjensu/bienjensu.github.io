@@ -621,21 +621,21 @@ sup::after{
 
 /* FILTRES */
 .filter-red {
-    filter: invert(13%) sepia(94%) saturate(7184%) hue-rotate(360deg) brightness(106%) contrast(108%) blur(5px) !important;
-    -webkit-filter: invert(13%) sepia(94%) saturate(7184%) hue-rotate(360deg) brightness(106%) contrast(108%) blur(5px) !important;
+    filter: invert(13%) sepia(94%) saturate(7884%) hue-rotate(360deg) brightness(106%) contrast(108%) blur(3px) !important;
+    -webkit-filter: invert(13%) sepia(94%) saturate(7184%) hue-rotate(360deg) brightness(106%) contrast(108%) blur(epx) !important;
 }
 
 .filter-green {
-    filter: invert(25%) sepia(99%) saturate(1411%) hue-rotate(96deg) brightness(97%) contrast(106%) blur(5px) !important;
-    -webkit-filter: invert(25%) sepia(99%) saturate(1411%) hue-rotate(96deg) brightness(97%) contrast(106%) blur(5px) !important;
+    filter: invert(25%) sepia(99%) saturate(1411%) hue-rotate(96deg) brightness(97%) contrast(106%) blur(3px) !important;
+    -webkit-filter: invert(25%) sepia(99%) saturate(1411%) hue-rotate(96deg) brightness(97%) contrast(106%) blur(3px) !important;
 }
 
 .filter-blue {
-    filter: invert(9%) sepia(95%) saturate(7244%) hue-rotate(248deg) brightness(95%) contrast(145%) blur(5px) !important;
-    -webkit-filter: invert(9%) sepia(95%) saturate(7244%) hue-rotate(248deg) brightness(95%) contrast(145%) blur(5px) !important;
+    filter: invert(9%) sepia(95%) saturate(7244%) hue-rotate(248deg) brightness(95%) contrast(145%) blur(3px) !important;
+    -webkit-filter: invert(9%) sepia(95%) saturate(7244%) hue-rotate(248deg) brightness(95%) contrast(145%) blur(3px) !important;
 }
 
 .filter-yellow {
-    filter: invert(94%) sepia(99%) saturate(2055%) hue-rotate(354deg) brightness(107%) contrast(108%) blur(5px) !important;
-    -webkit-filter: invert(94%) sepia(99%) saturate(2055%) hue-rotate(354deg) brightness(107%) contrast(108%) blur(5px) !important;
+    filter: invert(94%) sepia(99%) saturate(2055%) hue-rotate(354deg) brightness(107%) contrast(108%) blur(3px) !important;
+    -webkit-filter: invert(94%) sepia(99%) saturate(2055%) hue-rotate(354deg) brightness(107%) contrast(108%) blur(3px) !important;
 }
