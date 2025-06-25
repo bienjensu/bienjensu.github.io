@@ -1,9 +1,9 @@
 @font-face {
     font-family: "Iosevka Body";
-    src: url("font/iosevka-comfy-motion-fixed-normalsemilightupright.ttf")
+    src: url("font/iosevka-comfy-motion-fixed-normalsemilightupright.ttf");
 }
 :root {
-    --font-family: "Iosevka Body", 'BQN386', monospace;
+    --font-family: "Iosevka Body";
     --line-height: 1.20rem;
     --border-thickness: 2px;
     --text-color: #000;
@@ -12,15 +12,23 @@
     --background-color-alt: #eee;
 
     --font-weight-normal: 500;
-    --font-weight-medium: 600;
+    --font-weight-medium: 500;
     --font-weight-bold: 600;
     --highlight-color: black;
     font-family: var(--font-family);
-    font-optical-sizing: auto;
+    font-optical-sizing: none; /* auto */
+
+    /* pixel fonts */
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+
     font-weight: var(--font-weight-normal);
     font-style: normal;
     font-variant-numeric: tabular-nums lining-nums;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,6 +67,8 @@ body {
     margin: 0;
     padding: var(--line-height) 2ch;
     line-height: var(--line-height);
+    /* filter: contrast(100.00001%); */
+    /* -webkit-filter: contrast(100.00001%); */
 }
 
 .container {
@@ -564,7 +574,7 @@ label input {
 /* FILTRES */
 .filter-red {
     filter: invert(13%) sepia(94%) saturate(7184%) hue-rotate(360deg) brightness(106%) contrast(108%) !important;
-    -webkit-filter: invert(13%) sepia(94%) saturate(7184%) hue-rotate(360deg) brightness(106%) contrast(108%) !important;a
+    -webkit-filter: invert(13%) sepia(94%) saturate(7184%) hue-rotate(360deg) brightness(106%) contrast(108%) !important;
 }
 
 .filter-green {

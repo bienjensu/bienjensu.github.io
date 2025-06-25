@@ -43,7 +43,9 @@ var song = Array(
     `what appears as the positive is essentially the negative
 - Theodore Adorno`,
     `hope is reactionary
-- Ray Brassier`
+- Ray Brassier`,
+    `if you can find me, you're free to argue as much as you like
+- Primus`
 )
 
 var newQuote = () => {
