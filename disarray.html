@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="src/reset.css" />
         <link rel="stylesheet" href="src/index.css" />
               </head>
-  <body>
-    <marquee class="quoteblock colorme" onclick="updateColors()" _="on mousedown halt the event"></marquee>
+  <marquee class="quoteblock colorme" onclick="updateColors()" _="on mousedown halt the event"></marquee>
+  <body class="with-sidebar">
      <ul class="tree">
    <li>
      <details>
@@ -18,25 +18,24 @@
         <strong>~/<span> click me.</span></strong>
       </p>
       </summary>
-      <ul class="incremental">
+       <ul class="incremental" script="on scroll log 'scrolling'">
         <li><a href=".">.</a></li>
         <li><a href="./index.html">..</a></li>
         <li><a href="./about.html">about</a></li>
         <li><details class="details-inline"><summary>encyclicals</summary>
           <ul class="incremental">
-            <li><a href="./why-is-it-necessary.html">why-is-it-necessary</a> (august
-              2025)</li>
+            <li><a href="./why-is-it-necessary.html">why-is-it-necessary</a></li>
         </ul></details></li>
         <li><details class="details-inline"><summary>poetry</summary>
           <ul class="incremental">
             <li>companion verses (2025)</li>
-            <li><a href="nightwatch.html">nightwatch</a> (2022)</li>
-            <li><a href="disarray.html">disarray</a>         (2019–2020)</li>
+            <li><a href="nightwatch.html">nightwatch</a></li>
+            <li><a href="disarray.html">disarray</a></li>
         </ul></details></li>
          <li><details class="details-inline"><summary>games</summary>
           <ul class="incremental">
-            <li>black country    (2023–)</li>
-            <li>chicago boys     (2025)</li>
+            <li>black-country</li>
+            <li>chicago-boys</li>
          </ul></details></li>
       </ul>
       </details>

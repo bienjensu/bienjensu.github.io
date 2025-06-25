@@ -51,20 +51,12 @@
 }
 
 html {
-    display: flex;
-    width: 100%;
-    margin: auto;
-    padding: 0;
-    flex-direction: column;
-    justify-content: center;
-    justify-content: center;
     background: var(--background-color);
     color: var(--text-color);
 }
 
 body {
     position: relative;
-    width: 100%;
     margin: 0;
     padding: var(--line-height) 2ch;
     line-height: var(--line-height);
@@ -74,10 +66,30 @@ body {
 
 .container {
     position: relative;
-    width: 100%;
-    margin: auto;
     max-width: calc(min(80ch, 100%));
     line-height: var(--line-height);
+    margin-right: 2em;
+}
+
+.with-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    /* ↓ The default value is the first point on the modular scale */
+    gap: var(--line-height);
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.with-sidebar > :first-child {
+    /* ↓ The width when the sidebar _is_ a sidebar */
+    flex-basis: 0rem;
+    flex-grow: 1;
+}
+.with-sidebar > :nth-child(2) {
+    /* ↓ Grow from nothing */
+    flex-basis: 0;
+    flex-grow: 999;
+    /* ↓ Wrap when the elements are of equal width */
+    min-inline-size: 20%;
 }
 
 @media screen and (max-width: 480px) {
@@ -238,16 +250,18 @@ img:hover {
 }
 
 details {
+    width: 100%;
     /*border: var(--border-thickness) dashed var(--text-color);*/
     /*padding: calc(var(--line-height) - var(--border-thickness)) 1ch;*/
     /*margin-bottom: var(--line-height);*/
-    margin: var(--line-height);
+    /*margin: var(--line-height);*/
+    margin-top: var(--line-height);
 }
 
 @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+    50% {
+        opacity: 0;
+    }
 }
 
 summary {
@@ -572,14 +586,14 @@ sup::after{
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
-  z-index: 1000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    z-index: 1000;
 }
 
 .footer > a {text-decoration: none;}
