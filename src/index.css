@@ -622,7 +622,7 @@ sup::after{
 /* FILTRES */
 .filter-red {
     filter: invert(13%) sepia(94%) saturate(7884%) hue-rotate(360deg) brightness(106%) contrast(108%) blur(3px) !important;
-    -webkit-filter: invert(13%) sepia(94%) saturate(7184%) hue-rotate(360deg) brightness(106%) contrast(108%) blur(epx) !important;
+    -webkit-filter: invert(13%) sepia(94%) saturate(7184%) hue-rotate(360deg) brightness(106%) contrast(108%) blur(3px) !important;
 }
 
 .filter-green {
