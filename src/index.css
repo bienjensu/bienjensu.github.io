@@ -27,6 +27,7 @@
     --font-weight-bold: 500;
     --highlight-color: black;
     --font-size: 17px;
+    --body-width: 80ch;
     font-family: var(--font-family);
     font-optical-sizing: auto; /* auto */
 
@@ -78,10 +79,13 @@ body {
 }
 
 .container {
+    box-sizing: content-box;
+    padding: 1ch;
     position: relative;
-    max-width: calc(min(80ch, 100%));
+    max-width: calc(min(var(--body-width), 100%));
     line-height: var(--line-height);
     overflow: hidden;
+    /*border: 0.25em solid var(--highlight-color);*/
 }
 
 .with-sidebar {
@@ -103,7 +107,7 @@ body {
     flex-grow: 999;
     /* ↓ Wrap when the elements are of equal width */
     /*min-inline-size: 80%;*/
-    min-inline-size: calc(min(80ch, 100%));
+    min-inline-size: calc(min(var(--body-width), 100%));
     margin: auto;
 }
 
@@ -257,7 +261,7 @@ img {
     image-rendering: pixelated;                 /* Universal support since 2021   */
     image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-    max-width: 55ch;
+    max-width: calc(min(75%, 55ch));
     max-height: 55ch;
     margin: auto;
 }
