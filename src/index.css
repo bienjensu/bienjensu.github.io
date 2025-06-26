@@ -149,6 +149,13 @@ hr:after {
 a {
     text-decoration-thickness: var(--border-thickness);
     text-decoration: underline wavy var(--highlight-color);
+    -webkit-text-decoration: underline wavy var(--highlight-color);
+    text-decoration-style: wavy;
+    text-decoration-color: var(--highlight-color);
+    text-decoration-line: underline;
+    -webkit-text-decoration-style: wavy;
+    -webkit-text-decoration-color: var(--highlight-color);
+    -webkit-text-decoration-line: underline;
 }
 
 a:link, a:visited {
