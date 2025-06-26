@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 strong {
-    line-height: calc(2 * var(--line-height));
+    line-height: calc(3 * var(--line-height));
 }
 
 h1 {
