@@ -17,7 +17,7 @@ function adjustMediaPadding() {
       const rect = media.getBoundingClientRect();
       const realHeight = rect.width / ratio;
       const diff = cell.height - (realHeight % cell.height);
-      media.style.setProperty("padding-bottom", `${diff}px`);
+      media.parentNode.style.setProperty("margin-bottom", `${diff}px`);
   }
 
   function setFallbackHeight(media) {
@@ -46,7 +46,10 @@ function adjustMediaPadding() {
   }
 
   const medias = document.querySelectorAll("img, video");
-  for (media of medias) {
+    for (media of medias) {
+        // `element` is the element you want to wrap
+        var parent = media.parentNode;
+        parent.classList.add("media-wrapper");
     switch (media.tagName) {
       case "IMG":
         if (media.complete) {

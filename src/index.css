@@ -245,10 +245,10 @@ p {
 }
 
 img, video {
-    display: block;
     width: 100%;
     object-fit: contain;
     overflow: hidden;
+    height: 105%;
 }
 img {
     font-style: italic;
@@ -260,9 +260,19 @@ img {
     image-rendering: pixelated;                 /* Universal support since 2021   */
     image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
     -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+    overflow-clip-margin: 0 !important;
+    vertical-align: bottom !important;
+}
+
+
+.media-wrapper {
+    overflow:hidden;
+    margin: auto;
+    display:block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
     max-width: calc(min(75%, 55ch));
     max-height: 55ch;
-    margin: auto;
 }
 
 img:hover {
