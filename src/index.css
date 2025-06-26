@@ -28,6 +28,7 @@
     --highlight-color: black;
     --font-size: 17px;
     --body-width: 80ch;
+    --flare-font: "Xahn Mono";
     font-family: var(--font-family);
     font-optical-sizing: auto; /* auto */
 
@@ -112,16 +113,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-normal);
-    margin: calc(var(--line-height) * 2) 0 var(--line-height);
+    /*margin: calc(var(--line-height) * 2) 0 var(--line-height);*/
     line-height: var(--line-height);
 }
 
 h1 {
     font-size: 2rem;
     line-height: calc(2 * var(--line-height));
-    margin-bottom: calc(var(--line-height) * 2);
+    /*margin-bottom: calc(var(--line-height) * 2);*/
     text-transform: uppercase;
-    display: none;
+    font-family: var(--flare-font);
+    text-align: center;
 }
 h2 {
     font-size: 1rem;
