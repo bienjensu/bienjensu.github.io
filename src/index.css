@@ -54,10 +54,10 @@
     }
 }
 
- @media (min-width: 768px)
+ @media (max-width: 768px)
  {
      :root {
-         --font-size: 15px;
+         --font-size: 13px;
      }
  }
 
