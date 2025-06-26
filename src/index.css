@@ -54,6 +54,13 @@
     }
 }
 
+ @media (min-width: 768px)
+ {
+     :root {
+         --font-size: 15px;
+     }
+ }
+
 * {
     box-sizing: border-box;
 }
