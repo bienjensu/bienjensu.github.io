@@ -68,6 +68,7 @@ html {
 }
 
 body {
+    min-height: 100vh;
     position: relative;
     margin: 0;
     padding: var(--line-height) 2ch;
@@ -77,13 +78,10 @@ body {
 }
 
 .container {
-    gap: var(--line-height);
     position: relative;
     max-width: calc(min(80ch, 100%));
     line-height: var(--line-height);
-    margin-right: auto;
     overflow: hidden;
-
 }
 
 .with-sidebar {
@@ -91,21 +89,22 @@ body {
     flex-wrap: wrap;
     /* ↓ The default value is the first point on the modular scale */
     /*gap: var(--line-height);*/
-    justify-content: left;
     align-items: flex-start;
 }
 .with-sidebar > :first-child {
     /* ↓ The width when the sidebar _is_ a sidebar */
     flex-basis: 10em;
     flex-grow: 1;
-    max-inline-size: 13em;
+    max-inline-size: 10em;
 }
-.with-sidebar > :last-child {
+.with-sidebar > :nth-child(2) {
     /* ↓ Grow from nothing */
     flex-basis: 0rem;
     flex-grow: 999;
     /* ↓ Wrap when the elements are of equal width */
-    min-inline-size: 30%;
+    /*min-inline-size: 80%;*/
+    min-inline-size: calc(min(80ch, 100%));
+    margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
