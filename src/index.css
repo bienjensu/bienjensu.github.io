@@ -80,7 +80,6 @@ body {
 
 .container {
     box-sizing: content-box;
-    padding: 1ch;
     position: relative;
     max-width: calc(min(var(--body-width), 100%));
     line-height: var(--line-height);
