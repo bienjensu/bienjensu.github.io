@@ -75,6 +75,7 @@ body {
     width: 100%;
     padding: var(--line-height) 2ch;
     line-height: var(--line-height);
+    margin: 0;
     /* filter: contrast(100.00001%); */
     /* -webkit-filter: contrast(100.00001%); */
 }
@@ -97,7 +98,7 @@ body {
 }
 
 .container > :last-child {
-    margin-block-end: calc(var(--line-height) * 4);
+    margin-block-end: calc(var(--line-height) * 2);
 }
 
 /* .with-sidebar > * { */
