@@ -45,7 +45,9 @@ var song = Array(
     `hope is reactionary
 - Ray Brassier`,
     `if you can find me, you're free to argue as much as you like
-- Primus`
+- Primus`,
+    `the greatest pain of purgatory is the uncertainty of judgement
+- Blaise Pascal`
 )
 
 var newQuote = () => {
