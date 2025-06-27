@@ -40,131 +40,123 @@
           </ul>
         </details>
       </li>
-    </ul>
-    <div class="container" style="margin-block: auto;">
-      <p>I have the strange task today of reflecting on a tradition and
-      engaging in a practice which readily exists but has had little to
-      no serious reception in philosophy: the criticism of programming
-      considered a new form of writing both prosaic and, more recently,
-      poetic. In the course of attempting to write this presentation for
-      a second time<a href="#fn1" class="footnote-ref" id="fnref1"
-      role="doc-noteref"><sup>1</sup></a> I was again reminded how
-      gripping but hazy these thoughts remain, and how inadequate my
-      attempts to receive them philosophically stay. It is this
-      impediment to schematisation which remains for me absolutely
-      frustrating, but also evidence of the work which must be
-      undertaken. That being said, the ground floor if not the basement
-      of what I will say, and what I think we should say, lies in the
-      many, many things programmers say and have said themselves about
-      their practice; no matter how obscure, confused or inverted.</p>
-      <p>New modes of art always appear as sharing a border with the
-      Arts, which cannot recognise of the new mode their proximity. A
-      proximity based on and hidden by the historical transformations
-      the new mode engenders.<span class="citation"
-      data-cites="benjamin2006a benjamin2006"><a href="#fn2"
-      class="footnote-ref" id="fnref2"
-      role="doc-noteref"><sup>2</sup></a></span> For their part,
-      computer programmers don't themselves often recognise the status
-      of their practice, perhaps as a result of the fact that the vast
-      majority of programming work taught and performed daily hardly
-      qualifies as such. Or, on the occasion they feel the need to,
-      account for it in terms fitting for the petit-bourgeois—that is,
-      in the new philistine's new vocabulary of creativity, and
-      self-expression.</p>
-      <p>Computer science, like medicine, does not exhibit the unity
-      characteristic of a post-galilean science.<span class="citation"
-      data-cites="badiou2022"><a href="#fn3" class="footnote-ref"
-      id="fnref3" role="doc-noteref"><sup>3</sup></a></span> It is a
-      mixed discipline whose unity is notional and based more on its
-      location in the logistical phase of the post-war world system than
-      any mathematised object.<span class="citation"
-      data-cites="adorno1991"><a href="#fn4" class="footnote-ref"
-      id="fnref4" role="doc-noteref"><sup>4</sup></a></span> As a mixed
-      discipline, criticism of it in the french tradition<a href="#fn5"
-      class="footnote-ref" id="fnref5"
-      role="doc-noteref"><sup>5</sup></a> must give over to philosophy
-      what is categorical, science what is conceptual, and art what is
-      inaesthetic. This talk will focus on the latter through the
-      example of point-free programming.</p>
-      <p>The hazard to avoid at the outset of thinking about programming
-      is this: the immanent lawfulness regulating the eidetic production
-      of programs—if there is such a thing, which is my thesis—is
-      <em>not</em> the mechanical lawfulness governing the machines they
-      are embedded on, although it can sometimes be homologous to it, in
-      a kind of mimesis, nowhere more prominently than in the imperative
-      approach.</p>
-      <p>On one extremum we have the scorn<a href="#fn6"
-      class="footnote-ref" id="fnref6"
-      role="doc-noteref"><sup>6</sup></a> undergirding Backus' claim
-      that “conventional programming languages are […] high level
-      complex versions of the von Neumann computer,”<span
-      class="citation" data-cites="backus1978"><a href="#fn7"
-      class="footnote-ref" id="fnref7"
-      role="doc-noteref"><sup>7</sup></a></span> which was—and to a
-      lesser extent still is—an accurate characterisation of the
-      situation. Under such a negative proposition, the coming of
-      programming to itself involves the elimination, or liquidation, of
-      the trace of the underlying machine.</p>
-      <p>On the other, dispel the tower of abstraction (and hence
-      concretion) represented by the development of languages outside of
-      the ALGOL family is to lop off one armature of the and to empty
-      out the imperative of precisely its style.</p>
-      <p>Indeed it is for programming,</p>
-      <ol class="incremental">
-      <li>the pessimism of the imperative to liquidate programming as
-      lyrical into its mechanical other, and;<br />
-      </li>
-      <li>the enthusiasm of the functional to erase the trace of
-      mechanism without which programming would be quite literally
-      inoperational.<span class="citation" data-cites="badiou2004"><a
-      href="#fn8" class="footnote-ref" id="fnref8"
-      role="doc-noteref"><sup>8</sup></a></span></li>
-      </ol>
-      <p>And I don't mean to discourage either. But such considerations
-      are abstract in the bad sense before entering into examples which
-      illustrate their byplay, and although beginning with the approach
-      vitiated by the first reinforces the notion—the continued
-      dominance of which is intolerable—that the imperative maintains a
-      kind of primacy over other approaches, I don't have the audience
-      today to start from the other end.</p>
-      <p>An ancient way of computing primes, likely first transmitted
-      poetically as Euclid's proof of the infinity of primes was, is the
-      sieve of Eratosthenes:</p>
-      <p>Given a number <span
-      class="math inline"><em>n</em> ∈ ℕ</span>,<a href="#fn9"
-      class="footnote-ref" id="fnref9"
-      role="doc-noteref"><sup>9</sup></a> we can find all the prime
-      numbers equal to or less than <span
-      class="math inline"><em>n</em></span> by the following steps:</p>
-      <ol class="incremental">
-      <li>List all the numbers from <span class="math inline">1</span>
-      to <span class="math inline"><em>n</em></span>.<br />
-      </li>
-      <li>Starting with <span class="math inline"><em>p</em> = 2</span>,
-      mark each multiple of <span class="math inline"><em>p</em></span>
-      (<span
-      class="math inline">2<em>p</em>, 3<em>p</em>, ..., <em>m</em><em>p</em></span>)
-      until <span
-      class="math inline"><em>n</em> ≤ <em>m</em><em>p</em></span>.<br />
-      </li>
-      <li>Set <span class="math inline"><em>p</em></span> to be the next
-      largest unmarked number.<br />
-      </li>
-      <li>Repeat steps (2) and (3) until <span
-      class="math inline"><em>p</em></span> is the greatest unmarked
-      number.<br />
-      </li>
-      <li>The unmarked numbers are the primes less than or equal to
-      <span class="math inline"><em>n</em></span>.<a href="#fn10"
-      class="footnote-ref" id="fnref10"
-      role="doc-noteref"><sup>10</sup></a></li>
-      </ol>
-      <p>In effect, we've marked all the <em>composite</em> (non-prime)
-      numbers.</p>
-      <p>A program written in C in the imperative style realising this
-      algorithm looks something like this.</p>
-      <div class="sourceCode" id="cb1"><pre
-      class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> n <span class="op">=</span> <span class="dv">99</span><span class="op">;</span></span>
+</ul>
+<div class="container" style="margin-block: auto;">
+<p>I have the strange task today of reflecting on a tradition and
+engaging in a practice which readily exists but has had little to no
+serious reception in philosophy: the criticism of programming considered
+a new form of writing both prosaic and, more recently, poetic. In the
+course of attempting to write this presentation for a second time<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> I was again reminded how gripping
+but hazy these thoughts remain, and how inadequate my attempts to
+receive them philosophically stay. It is this impediment to
+schematisation which remains for me absolutely frustrating, but also
+evidence of the work which must be undertaken. That being said, the
+ground floor if not the basement of what I will say, and what I think we
+should say, lies in the many, many things programmers say and have said
+themselves about their practice; no matter how obscure, confused or
+inverted.</p>
+<p>New modes of art always appear as sharing a border with the Arts,
+which cannot recognise of the new mode their proximity. A proximity
+based on and hidden by the historical transformations the new mode
+engenders.<span class="citation"
+data-cites="benjamin2006a benjamin2006"><a href="#fn2"
+class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></span> For their part, computer
+programmers don't themselves often recognise the status of their
+practice, perhaps as a result of the fact that the vast majority of
+programming work taught and performed daily hardly qualifies as such.
+Or, on the occasion they feel the need to, account for it in terms
+fitting for the petit-bourgeois—that is, in the new philistine's new
+vocabulary of creativity, and self-expression.</p>
+<p>Computer science, like medicine, does not exhibit the unity
+characteristic of a post-galilean science.<span class="citation"
+data-cites="badiou2022"><a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a></span> It is a mixed discipline
+whose unity is notional and based more on its location in the logistical
+phase of the post-war world system than any mathematised object.<span
+class="citation" data-cites="adorno1991"><a href="#fn4"
+class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a></span> As a mixed discipline,
+criticism of it in the french tradition<a href="#fn5"
+class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>
+must give over to philosophy what is categorical, science what is
+conceptual, and art what is inaesthetic. This talk will focus on the
+latter through the example of point-free programming.</p>
+<p>The hazard to avoid at the outset of thinking about programming is
+this: the immanent lawfulness regulating the eidetic production of
+programs—if there is such a thing, which is my thesis—is <em>not</em>
+the mechanical lawfulness governing the machines they are embedded on,
+although it can sometimes be homologous to it, in a kind of mimesis,
+nowhere more prominently than in the imperative approach.</p>
+<p>On one extremum we have the scorn<a href="#fn6" class="footnote-ref"
+id="fnref6" role="doc-noteref"><sup>6</sup></a> undergirding Backus'
+claim that “conventional programming languages are […] high level
+complex versions of the von Neumann computer,”<span class="citation"
+data-cites="backus1978"><a href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"><sup>7</sup></a></span> which was—and to a lesser
+extent still is—an accurate characterisation of the situation. Under
+such a negative proposition, the coming of programming to itself
+involves the elimination, or liquidation, of the trace of the underlying
+machine.</p>
+<p>On the other, dispel the tower of abstraction (and hence concretion)
+represented by the development of languages outside of the ALGOL family
+is to lop off one armature of the and to empty out the imperative of
+precisely its style.</p>
+<p>Indeed it is for programming,</p>
+<ol class="incremental">
+<li>the pessimism of the imperative to liquidate programming as lyrical
+into its mechanical other, and;<br />
+</li>
+<li>the enthusiasm of the functional to erase the trace of mechanism
+without which programming would be quite literally inoperational.<span
+class="citation" data-cites="badiou2004"><a href="#fn8"
+class="footnote-ref" id="fnref8"
+role="doc-noteref"><sup>8</sup></a></span></li>
+</ol>
+<p>And I don't mean to discourage either. But such considerations are
+abstract in the bad sense before entering into examples which illustrate
+their byplay, and although beginning with the approach vitiated by the
+first reinforces the notion—the continued dominance of which is
+intolerable—that the imperative maintains a kind of primacy over other
+approaches, I don't have the audience today to start from the other
+end.</p>
+<p>An ancient way of computing primes, likely first transmitted
+poetically as Euclid's proof of the infinity of primes was, is the sieve
+of Eratosthenes:</p>
+<p>Given a number <span class="math inline"><em>n</em> ∈ ℕ</span>,<a
+href="#fn9" class="footnote-ref" id="fnref9"
+role="doc-noteref"><sup>9</sup></a> we can find all the prime numbers
+equal to or less than <span class="math inline"><em>n</em></span> by the
+following steps:</p>
+<ol class="incremental">
+<li>List all the numbers from <span class="math inline">1</span> to
+<span class="math inline"><em>n</em></span>.<br />
+</li>
+<li>Starting with <span class="math inline"><em>p</em> = 2</span>, mark
+each multiple of <span class="math inline"><em>p</em></span> (<span
+class="math inline">2<em>p</em>, 3<em>p</em>, ..., <em>m</em><em>p</em></span>)
+until <span
+class="math inline"><em>n</em> ≤ <em>m</em><em>p</em></span>.<br />
+</li>
+<li>Set <span class="math inline"><em>p</em></span> to be the next
+largest unmarked number.<br />
+</li>
+<li>Repeat steps (2) and (3) until <span
+class="math inline"><em>p</em></span> is the greatest unmarked
+number.<br />
+</li>
+<li>The unmarked numbers are the primes less than or equal to <span
+class="math inline"><em>n</em></span>.<a href="#fn10"
+class="footnote-ref" id="fnref10"
+role="doc-noteref"><sup>10</sup></a></li>
+</ol>
+<p>In effect, we've marked all the <em>composite</em> (non-prime)
+numbers.</p>
+<p>A program written in C in the imperative style realising this
+algorithm looks something like this.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> n <span class="op">=</span> <span class="dv">99</span><span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> primes<span class="op">[</span><span class="dv">99</span><span class="op">]</span> <span class="op">=</span> <span class="op">{</span><span class="kw">true</span><span class="op">};</span>         <span class="co">// Step 1</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i<span class="op">=</span><span class="dv">2</span><span class="op">;</span> i<span class="op">&lt;=</span>n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
@@ -180,72 +172,66 @@
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%d</span><span class="st"> &quot;</span><span class="op">,</span> i<span class="op">);</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-      <p>The virtue of the imperative approach, as its name suggests, is
-      that it aligns very closely with what is in effect a list of
-      commands.</p>
-      <p>Note the abundance of <em>assignment</em> statements: we
-      allocate and assign <code>n</code> (1), we allocate and assign
-      <code>primes</code> (2), we allocate and assign <code>i</code> and
-      <code>j</code> (3, 5) as indicies into <code>primes</code>. And
-      the mark, in step two of the sieve, which indicates composite
-      (that is non-prime) numbers is achieved by <em>mutating</em>
-      <code>primes</code> in-place (6). Similarly, <code>i</code> and
-      <code>j</code> as indicies are
-      <em>mutated</em>—‘<code>i++</code>’, ‘<code>j+=i</code>’—in their
-      respective <code>for</code> statements.<a href="#fn11"
-      class="footnote-ref" id="fnref11"
-      role="doc-noteref"><sup>11</sup></a></p>
-      <p>Whereas <code>n</code> stays constant across the whole program,
-      <code>primes</code> acts as <em>state</em> insofar as it is a name
-      associated with, at least notionally,<a href="#fn12"
-      class="footnote-ref" id="fnref12"
-      role="doc-noteref"><sup>12</sup></a> different values at different
-      points of the program. This “invisible state,” which is “[operated
-      on] according to complex rules,”<span class="citation"
-      data-cites="backus1978"><a href="#fn13" class="footnote-ref"
-      id="fnref13" role="doc-noteref"><sup>13</sup></a></span>
-      introduces a conceptual overhead which is impossible to ignore
-      while reading and writing the program.</p>
-      <p>Backus notes that “[the imperative program] is dynamic and
-      repetetive. One must mentally execute it to understand it,”<span
-      class="citation" data-cites="backus1978"><a href="#fn14"
-      class="footnote-ref" id="fnref14"
-      role="doc-noteref"><sup>14</sup></a></span> such that as a result
-      of the program's behaviour being subject to hidden state,
-      appreciating the wider behaviour (or misbehaviour, as the case may
-      be) of the program requires adopting the mechanism of the von
-      Neumann computer, by ‘stepping through’ its loops and other
-      control flow structures, that mutate state and are dynamic with
-      respect to this state.</p>
-      <p>Reading and writing programs in the imperative is then a matter
-      of adopting the stance of state and its mutation, control flow and
-      looping in the understanding. And the process of writing
-      considered independently quickly becomes one of
-      <em>coding</em>—maybe more so in numerical programming—:
-      transliterating concepts into a form exogenous to the figure of
-      thought and the conceptual agility of their first environment (to
-      which I would like in all honesty to oppose programming). The
-      impetus behind the original algorithmic thought is lost in the
-      noise of what Backus refers to again and again as
-      “housekeeping”.</p>
-      <p>In his 1980 Turing Award lecture, just a year after Backus'
-      lecture in the same capacity, Iverson presented APL (‘a
-      programming language’) as exemplary of the direction Backus
-      pleaded for at the end of his presentation. It was, importantly,
-      implemented, unlike Backus' proposal would eventually be in the
-      form of FP,<a href="#fn15" class="footnote-ref" id="fnref15"
-      role="doc-noteref"><sup>15</sup></a> although, like Backus', it
-      had grown out of an alternative system of notation. In fact,
-      Iverson explicitly links the design of APL to the expressivity,
-      suggestivity and economy, or terseness, of notation in
-      mathematics.<span class="citation" data-cites="iverson1980"><a
-      href="#fn16" class="footnote-ref" id="fnref16"
-      role="doc-noteref"><sup>16</sup></a></span> Such economy, it must
-      be said, that to scare you this, <code>((⊢~∘.×⍨)1↓⍳)99</code>,
-      <em>is</em> the sieve of Eratosthenes in APL.<a href="#fn17"
-      class="footnote-ref" id="fnref17"
-      role="doc-noteref"><sup>17</sup></a></p>
-      <pre class="apl"><code>2 + 3              ⍝ 1
+<p>The virtue of the imperative approach, as its name suggests, is that
+it aligns very closely with what is in effect a list of commands.</p>
+<p>Note the abundance of <em>assignment</em> statements: we allocate and
+assign <code>n</code> (1), we allocate and assign <code>primes</code>
+(2), we allocate and assign <code>i</code> and <code>j</code> (3, 5) as
+indicies into <code>primes</code>. And the mark, in step two of the
+sieve, which indicates composite (that is non-prime) numbers is achieved
+by <em>mutating</em> <code>primes</code> in-place (6). Similarly,
+<code>i</code> and <code>j</code> as indicies are
+<em>mutated</em>—‘<code>i++</code>’, ‘<code>j+=i</code>’—in their
+respective <code>for</code> statements.<a href="#fn11"
+class="footnote-ref" id="fnref11"
+role="doc-noteref"><sup>11</sup></a></p>
+<p>Whereas <code>n</code> stays constant across the whole program,
+<code>primes</code> acts as <em>state</em> insofar as it is a name
+associated with, at least notionally,<a href="#fn12"
+class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>
+different values at different points of the program. This “invisible
+state,” which is “[operated on] according to complex rules,”<span
+class="citation" data-cites="backus1978"><a href="#fn13"
+class="footnote-ref" id="fnref13"
+role="doc-noteref"><sup>13</sup></a></span> introduces a conceptual
+overhead which is impossible to ignore while reading and writing the
+program.</p>
+<p>Backus notes that “[the imperative program] is dynamic and
+repetetive. One must mentally execute it to understand it,”<span
+class="citation" data-cites="backus1978"><a href="#fn14"
+class="footnote-ref" id="fnref14"
+role="doc-noteref"><sup>14</sup></a></span> such that as a result of the
+program's behaviour being subject to hidden state, appreciating the
+wider behaviour (or misbehaviour, as the case may be) of the program
+requires adopting the mechanism of the von Neumann computer, by
+‘stepping through’ its loops and other control flow structures, that
+mutate state and are dynamic with respect to this state.</p>
+<p>Reading and writing programs in the imperative is then a matter of
+adopting the stance of state and its mutation, control flow and looping
+in the understanding. And the process of writing considered
+independently quickly becomes one of <em>coding</em>—maybe more so in
+numerical programming—: transliterating concepts into a form exogenous
+to the figure of thought and the conceptual agility of their first
+environment (to which I would like in all honesty to oppose
+programming). The impetus behind the original algorithmic thought is
+lost in the noise of what Backus refers to again and again as
+“housekeeping”.</p>
+<p>In his 1980 Turing Award lecture, just a year after Backus' lecture
+in the same capacity, Iverson presented APL (‘a programming language’)
+as exemplary of the direction Backus pleaded for at the end of his
+presentation. It was, importantly, implemented, unlike Backus' proposal
+would eventually be in the form of FP,<a href="#fn15"
+class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>
+although, like Backus', it had grown out of an alternative system of
+notation. In fact, Iverson explicitly links the design of APL to the
+expressivity, suggestivity and economy, or terseness, of notation in
+mathematics.<span class="citation" data-cites="iverson1980"><a
+href="#fn16" class="footnote-ref" id="fnref16"
+role="doc-noteref"><sup>16</sup></a></span> Such economy, it must be
+said, that to scare you this, <code>((⊢~∘.×⍨)1↓⍳)99</code>, <em>is</em>
+the sieve of Eratosthenes in APL.<a href="#fn17" class="footnote-ref"
+id="fnref17" role="doc-noteref"><sup>17</sup></a></p>
+<pre class="apl"><code>2 + 3              ⍝ 1
   5
 2 2 3 + 1 1 1      ⍝ 2
   3 3 4
@@ -260,160 +246,150 @@
 +/⍳5               ⍝ 7
   15
 </code></pre>
-      <p>Or rather.</p>
-      <pre class="apl"><code>((⊢~∘.×⍨)1↓⍳)99
+<p>Or rather.</p>
+<pre class="apl"><code>((⊢~∘.×⍨)1↓⍳)99
 </code></pre>
-      <p>What has been eliminated in the tacit implementation of the
-      sieve in APL is what is called ‘pointedness’, that is the
-      appearance of intermediary names (even if they function as values,
-      as in the case of the lambda definition we saw earlier). What has
-      been written is something like the algorithm as such, not as a
-      series of operations performed on an object which is separate from
-      them, but as Operation; the name of which is the sieve of
-      Eratosthenes. Not merely in a functional way, as if
-      <code>((⊢~∘.×⍨)1↓⍳)99</code> is a hypostasised artefact, but also
-      in a way that suggests all manner of variations.</p>
-      <p>Much of what Hsu has to say is invective fielded not at the
-      predominance of a certain fixed idea of structured programming
-      which Dijkstra helped reinforce, as is the case with Backus, but
-      at the second wave of the same reactionary trend in
-      programming</p>
-      <p>Much of what I am about to talk about is best seen as a
-      response to the felt deficiencies … but in the models of software
-      development deployed in response to the second software crisis of
-      the 90s—that is, after the first of the late 50s into the 60s.</p>
-      <p>It might be argued that the counterpoint to the imperative is
-      the functional, and so I should have. This is true</p>
-      <div class="sourceCode" id="cb4"><pre
-      class="sourceCode clojure"><code class="sourceCode clojure"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">-&gt;&gt;</span> numbers</span>
+<p>What has been eliminated in the tacit implementation of the sieve in
+APL is what is called ‘pointedness’, that is the appearance of
+intermediary names (even if they function as values, as in the case of
+the lambda definition we saw earlier). What has been written is
+something like the algorithm as such, not as a series of operations
+performed on an object which is separate from them, but as Operation;
+the name of which is the sieve of Eratosthenes. Not merely in a
+functional way, as if <code>((⊢~∘.×⍨)1↓⍳)99</code> is a hypostasised
+artefact, but also in a way that suggests all manner of variations.</p>
+<p>Much of what Hsu has to say is invective fielded not at the
+predominance of a certain fixed idea of structured programming which
+Dijkstra helped reinforce, as is the case with Backus, but at the second
+wave of the same reactionary trend in programming</p>
+<p>Much of what I am about to talk about is best seen as a response to
+the felt deficiencies … but in the models of software development
+deployed in response to the second software crisis of the 90s—that is,
+after the first of the late 50s into the 60s.</p>
+<p>It might be argued that the counterpoint to the imperative is the
+functional, and so I should have. This is true</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode clojure"><code class="sourceCode clojure"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">-&gt;&gt;</span> numbers</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">filter</span> <span class="kw">even?</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  (<span class="kw">map</span> square))</span></code></pre></div>
-      <div class="sourceCode" id="cb5"><pre
-      class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>numbers</span>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>numbers</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>iter()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>filter(<span class="op">|</span>n<span class="op">|</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>)</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>map(<span class="op">|</span>n<span class="op">|</span> n <span class="op">*</span> n)</span></code></pre></div>
-      <p>Badiou writes that “while poetry is associated with an
-      experience, mathematics is concerned with a proof;” but reading
-      and writing programs is associated with a kind of experience—of
-      the kind bachelard talks about de-imagized intuition, poetry
-      subtracted from language; and simultaneously at the antipode
-      operation, computation, delivered from wrote meniality.</p>
-      <p>And this concern, for the order and connection of operations,
-      once freed from the burden utility(?) has made room for a
-      nonlinguistic poetic thought-practice of Operation.</p>
-      <p><strong>references</strong></p>
-      <h1 class="unnumbered" id="footnotes">Footnotes</h1>
-      <div id="refs" class="references csl-bib-body hanging-indent"
-      data-entry-spacing="0" role="list">
-      <div id="ref-adorno1991" class="csl-entry" role="listitem">
-      Adorno, Theodore. <em>Notes to <span>Literature</span></em>.
-      Translated by Shierry Weber Nicholsen. Columbia University Press,
-      1991.
-      </div>
-      <div id="ref-backus1978" class="csl-entry" role="listitem">
-      Backus, John. <span>“Can Programming Be Liberated from the von
-      <span>Neumann</span> Style?: A Functional Style and Its Algebra of
-      Programs.”</span> <em>Commun. ACM</em> 21, no. 8 (August 1, 1978):
-      613–41. <a
-      href="https://doi.org/10.1145/359576.359579">https://doi.org/10.1145/359576.359579</a>.
-      </div>
-      <div id="ref-badiou2004" class="csl-entry" role="listitem">
-      Badiou, Alain. <em>Infinite <span>Thought</span>: Truth and the
-      Return to Philosophy</em>. Edited and translated by Justin Clemens
-      and Oliver Feltham. London ; New York: Continuum, 2004.
-      </div>
-      <div id="ref-badiou2022" class="csl-entry" role="listitem">
-      ———. <em>The Immanence of Truths: <span>Being</span> and Event
-      <span>III</span></em>. Edited by Susan Spitzer. Translated by
-      Kenneth Reinhard. Being and Event 3. London ; New York: Bloomsbury
-      Academic, 2022.
-      </div>
-      <div id="ref-benjamin2006" class="csl-entry" role="listitem">
-      Benjamin, Walter. <em>Selected Writings. <span>Volume</span> 4:
-      1938 - 1940</em>. Edited by Howard Eiland and Michael W. Jennings.
-      1st pbk. ed. Vol. 4. 4 vols. Cambridge, Mass: Belknap Press of
-      Harvard Univ. Press, 2006.
-      </div>
-      <div id="ref-benjamin2006a" class="csl-entry" role="listitem">
-      ———. <span>“The <span>Work</span> of <span>Art</span> in the
-      <span>Age</span> of Its <span>Mechanical
-      Reproducibility</span>.”</span> In <em>Selected Writings.
-      <span>Volume</span> 4: 1938 - 1940</em>, 4:251–83, 2006.
-      </div>
-      <div id="ref-iverson1980" class="csl-entry" role="listitem">
-      Iverson, Kenneth E. <span>“Notation as a Tool of Thought.”</span>
-      <em>Commun. ACM</em> 23, no. 8 (August 1, 1980): 444–65. <a
-      href="https://doi.org/10.1145/358896.358899">https://doi.org/10.1145/358896.358899</a>.
-      </div>
-      </div>
-      <section id="footnotes"
-      class="footnotes footnotes-end-of-document" role="doc-endnotes">
-      <hr />
-      <ol>
-      <li id="fn1"><p>the first being an embryonic version given at the
-      Psychoanalysis Society of the University of Essex some three years
-      ago.<a href="#fnref1" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      <li id="fn2"><p>Benjamin, <span>“Work of <span>Art</span>,”</span>
-      258 in; Benjamin, <em>Selected <span>Writings</span></em>,
-      4:258–81.<a href="#fnref2" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      <li id="fn3"><p>Compare Badiou, <em>The Immanence of Truths</em>,
-      504–5.<a href="#fnref3" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      <li id="fn4"><p>As opposed to mathematics which “eliminates from
-      [itself] everything that could be due simply to the contingency of
-      [its] individuation” Adorno, <em>Notes to
-      <span>Literature</span></em>, 107.<a href="#fnref4"
-      class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-      <li id="fn5"><p>As opposed to the german.<a href="#fnref5"
-      class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-      <li id="fn6"><p>The same scorn Dijkstra had when claiming that
-      “computer science has nothing to do with computers.”<a
-      href="#fnref6" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      <li id="fn7"><p>Backus, <span>“Can <span>Programming</span> Be
-      <span>Liberated</span>,”</span> 615.<a href="#fnref7"
-      class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-      <li id="fn8"><p>Compare Badiou, <em>Infinite
-      <span>Thought</span></em>, 86 on the relationship between politics
-      and psychoanalysis.<a href="#fnref8" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      <li id="fn9"><p>read ‘given a natural number n’, or ‘an n in n’,
-      that is a ‘positive whole number’, one of <span
-      class="math inline">1, 2, 3...</span><a href="#fnref9"
-      class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-      <li id="fn10"><p>It could be that <span
-      class="math inline"><em>p</em> = <em>n</em></span>.<a
-      href="#fnref10" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      <li id="fn11"><p><span class="math inline">⋅(<em>n</em>)⋅</span>s
-      are <span class="math inline">⋅</span>line <em>n</em> of the above
-      code snippet<span class="math inline">⋅</span>s.<a href="#fnref11"
-      class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-      <li id="fn12"><p>as optimising compilers could do any number of
-      things to mangle this assumption.<a href="#fnref12"
-      class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-      <li id="fn13"><p>Backus, <span>“Can <span>Programming</span> Be
-      <span>Liberated</span>,”</span> 616.<a href="#fnref13"
-      class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-      <li id="fn14"><p>Ibid.<a href="#fnref14" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      <li id="fn15"><p>‘functional programming’, although for anyone
-      familiar with what is called functional programming, it's not
-      quite the same.<a href="#fnref15" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      <li id="fn16"><p>Iverson, <span>“Notation as a Tool of
-      Thought,”</span> 445.<a href="#fnref16" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      <li id="fn17"><p>Courtesy of <code>https://aplcart.info</code>.<a
-      href="#fnref17" class="footnote-back"
-      role="doc-backlink">↩︎</a></p></li>
-      </ol>
-      </section>
-          </div>
-    <div class="footer colorme"><a href="https://bienjensu.github.io">DEUS ABSCONDITUS</a></div>
+<p>Badiou writes that “while poetry is associated with an experience,
+mathematics is concerned with a proof;” but reading and writing programs
+is associated with a kind of experience—of the kind bachelard talks
+about de-imagized intuition, poetry subtracted from language; and
+simultaneously at the antipode operation, computation, delivered from
+wrote meniality.</p>
+<p>And this concern, for the order and connection of operations, once
+freed from the burden utility(?) has made room for a nonlinguistic
+poetic thought-practice of Operation.</p>
+<p><strong>references</strong></p>
+<h1 class="unnumbered" id="footnotes">Footnotes</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-adorno1991" class="csl-entry" role="listitem">
+Adorno, Theodore. <em>Notes to <span>Literature</span></em>. Translated
+by Shierry Weber Nicholsen. Columbia University Press, 1991.
+</div>
+<div id="ref-backus1978" class="csl-entry" role="listitem">
+Backus, John. <span>“Can Programming Be Liberated from the von
+<span>Neumann</span> Style?: A Functional Style and Its Algebra of
+Programs.”</span> <em>Commun. ACM</em> 21, no. 8 (August 1, 1978):
+613–41. <a
+href="https://doi.org/10.1145/359576.359579">https://doi.org/10.1145/359576.359579</a>.
+</div>
+<div id="ref-badiou2004" class="csl-entry" role="listitem">
+Badiou, Alain. <em>Infinite <span>Thought</span>: Truth and the Return
+to Philosophy</em>. Edited and translated by Justin Clemens and Oliver
+Feltham. London ; New York: Continuum, 2004.
+</div>
+<div id="ref-badiou2022" class="csl-entry" role="listitem">
+———. <em>The Immanence of Truths: <span>Being</span> and Event
+<span>III</span></em>. Edited by Susan Spitzer. Translated by Kenneth
+Reinhard. Being and Event 3. London ; New York: Bloomsbury Academic,
+2022.
+</div>
+<div id="ref-benjamin2006" class="csl-entry" role="listitem">
+Benjamin, Walter. <em>Selected Writings. <span>Volume</span> 4: 1938 -
+1940</em>. Edited by Howard Eiland and Michael W. Jennings. 1st pbk. ed.
+Vol. 4. 4 vols. Cambridge, Mass: Belknap Press of Harvard Univ. Press,
+2006.
+</div>
+<div id="ref-benjamin2006a" class="csl-entry" role="listitem">
+———. <span>“The <span>Work</span> of <span>Art</span> in the
+<span>Age</span> of Its <span>Mechanical Reproducibility</span>.”</span>
+In <em>Selected Writings. <span>Volume</span> 4: 1938 - 1940</em>,
+4:251–83, 2006.
+</div>
+<div id="ref-iverson1980" class="csl-entry" role="listitem">
+Iverson, Kenneth E. <span>“Notation as a Tool of Thought.”</span>
+<em>Commun. ACM</em> 23, no. 8 (August 1, 1980): 444–65. <a
+href="https://doi.org/10.1145/358896.358899">https://doi.org/10.1145/358896.358899</a>.
+</div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>the first being an embryonic version given at the
+Psychoanalysis Society of the University of Essex some three years
+ago.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Benjamin, <span>“Work of <span>Art</span>,”</span> 258
+in; Benjamin, <em>Selected <span>Writings</span></em>, 4:258–81.<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Compare Badiou, <em>The Immanence of Truths</em>,
+504–5.<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>As opposed to mathematics which “eliminates from
+[itself] everything that could be due simply to the contingency of [its]
+individuation” Adorno, <em>Notes to <span>Literature</span></em>, 107.<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>As opposed to the german.<a href="#fnref5"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>The same scorn Dijkstra had when claiming that “computer
+science has nothing to do with computers.”<a href="#fnref6"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Backus, <span>“Can <span>Programming</span> Be
+<span>Liberated</span>,”</span> 615.<a href="#fnref7"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Compare Badiou, <em>Infinite <span>Thought</span></em>,
+86 on the relationship between politics and psychoanalysis.<a
+href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>read ‘given a natural number n’, or ‘an n in n’, that is
+a ‘positive whole number’, one of <span
+class="math inline">1, 2, 3...</span><a href="#fnref9"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>It could be that <span
+class="math inline"><em>p</em> = <em>n</em></span>.<a href="#fnref10"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p><span class="math inline">⋅(<em>n</em>)⋅</span>s are
+<span class="math inline">⋅</span>line <em>n</em> of the above code
+snippet<span class="math inline">⋅</span>s.<a href="#fnref11"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>as optimising compilers could do any number of things
+to mangle this assumption.<a href="#fnref12" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>Backus, <span>“Can <span>Programming</span> Be
+<span>Liberated</span>,”</span> 616.<a href="#fnref13"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>Ibid.<a href="#fnref14" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>‘functional programming’, although for anyone familiar
+with what is called functional programming, it's not quite the same.<a
+href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p>Iverson, <span>“Notation as a Tool of Thought,”</span>
+445.<a href="#fnref16" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p>Courtesy of <code>https://aplcart.info</code>.<a
+href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</div>
+    <div class="footer colorme"><a href="https://bienjensu.github.io">DEUS⊙ABSCONDITUS</a></div>
     <marquee class="quoteblock quoteme colorme" onclick="updateColors()" _="on mousedown halt the event"></marquee>
   </body>
   <script src="src/index.js"></script>
