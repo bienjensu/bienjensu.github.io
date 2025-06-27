@@ -90,6 +90,7 @@ body {
     max-width: calc(min(var(--body-width), 100%));
     line-height: var(--line-height);
     overflow: hidden;
+    justify-content: center;
 }
 
 /* .with-sidebar > * { */
@@ -105,7 +106,7 @@ body {
 }
 .with-sidebar > :first-child {
     /* ↓ The width when the sidebar _is_ a sidebar */
-    flex-basis: 2em;
+    flex-basis: 5em;
     flex-grow: 1;
     max-width: 15ch;
 }
@@ -355,7 +356,7 @@ details :last-child {
 
 pre {
     white-space: pre;
-    overflow-x: auto;
+    overflow-x: scroll;
     margin: var(--line-height) 0;
     overflow-y: hidden;
     width: 100%;
