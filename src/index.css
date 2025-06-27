@@ -114,9 +114,7 @@ body {
 }
 .with-sidebar > :first-child {
     /* ↓ The width when the sidebar _is_ a sidebar */
-    flex-basis: 5em;
-    flex-grow: 1;
-    max-width: 15ch;
+    flex-shrink: 0;
 }
 .with-sidebar > :nth-child(2) {
     margin-left: auto;
