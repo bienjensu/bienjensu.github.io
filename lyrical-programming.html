@@ -42,6 +42,7 @@
     </li>
  </ul>
  <div class="container">
+   <div style="margin-block: auto;">
 <p>I have the strange task today of reflecting on a tradition and
 engaging in a practice which readily exists but has had little to no
 serious reception in philosophy: the criticism of programming considered
@@ -157,12 +158,12 @@ numbers.</p>
 <p>A program written in C in the imperative style realising this
 algorithm looks something like this.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> n <span class="op">=</span> <span class="dv">99</span><span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> primes<span class="op">[</span><span class="dv">99</span><span class="op">]</span> <span class="op">=</span> <span class="op">{</span>true<span class="op">};</span>         <span class="co">// Step 1</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> primes<span class="op">[</span><span class="dv">99</span><span class="op">]</span> <span class="op">=</span> <span class="op">{</span><span class="kw">true</span><span class="op">};</span>         <span class="co">// Step 1</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i<span class="op">=</span><span class="dv">2</span><span class="op">;</span> i<span class="op">&lt;=</span>n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>primes<span class="op">[</span>i<span class="op">])</span> <span class="op">{</span>                <span class="co">// Step 3/4</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j<span class="op">=</span><span class="dv">2</span><span class="op">*</span>i<span class="op">;</span> j<span class="op">&lt;=</span>n<span class="op">;</span> j<span class="op">+=</span>i<span class="op">)</span> <span class="op">{</span> <span class="co">// Step 2</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      primes<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> false<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      primes<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
@@ -289,42 +290,42 @@ poetic thought-practice of Operation.</p>
 <p><strong>references</strong></p>
 <h1 class="unnumbered" id="footnotes">Footnotes</h1>
 <div id="refs" class="references csl-bib-body hanging-indent"
-role="doc-bibliography">
-<div id="ref-adorno1991" class="csl-entry" role="doc-biblioentry">
+data-entry-spacing="0" role="list">
+<div id="ref-adorno1991" class="csl-entry" role="listitem">
 Adorno, Theodore. <em>Notes to <span>Literature</span></em>. Translated
 by Shierry Weber Nicholsen. Columbia University Press, 1991.
 </div>
-<div id="ref-backus1978" class="csl-entry" role="doc-biblioentry">
+<div id="ref-backus1978" class="csl-entry" role="listitem">
 Backus, John. <span>“Can Programming Be Liberated from the von
 <span>Neumann</span> Style?: A Functional Style and Its Algebra of
 Programs.”</span> <em>Commun. ACM</em> 21, no. 8 (August 1, 1978):
 613–41. <a
 href="https://doi.org/10.1145/359576.359579">https://doi.org/10.1145/359576.359579</a>.
 </div>
-<div id="ref-badiou2004" class="csl-entry" role="doc-biblioentry">
+<div id="ref-badiou2004" class="csl-entry" role="listitem">
 Badiou, Alain. <em>Infinite <span>Thought</span>: Truth and the Return
 to Philosophy</em>. Edited and translated by Justin Clemens and Oliver
 Feltham. London ; New York: Continuum, 2004.
 </div>
-<div id="ref-badiou2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-badiou2022" class="csl-entry" role="listitem">
 ———. <em>The Immanence of Truths: <span>Being</span> and Event
 <span>III</span></em>. Edited by Susan Spitzer. Translated by Kenneth
 Reinhard. Being and Event 3. London ; New York: Bloomsbury Academic,
 2022.
 </div>
-<div id="ref-benjamin2006" class="csl-entry" role="doc-biblioentry">
+<div id="ref-benjamin2006" class="csl-entry" role="listitem">
 Benjamin, Walter. <em>Selected Writings. <span>Volume</span> 4: 1938 -
 1940</em>. Edited by Howard Eiland and Michael W. Jennings. 1st pbk. ed.
 Vol. 4. 4 vols. Cambridge, Mass: Belknap Press of Harvard Univ. Press,
 2006.
 </div>
-<div id="ref-benjamin2006a" class="csl-entry" role="doc-biblioentry">
+<div id="ref-benjamin2006a" class="csl-entry" role="listitem">
 ———. <span>“The <span>Work</span> of <span>Art</span> in the
 <span>Age</span> of Its <span>Mechanical Reproducibility</span>.”</span>
 In <em>Selected Writings. <span>Volume</span> 4: 1938 - 1940</em>,
 4:251–83, 2006.
 </div>
-<div id="ref-iverson1980" class="csl-entry" role="doc-biblioentry">
+<div id="ref-iverson1980" class="csl-entry" role="listitem">
 Iverson, Kenneth E. <span>“Notation as a Tool of Thought.”</span>
 <em>Commun. ACM</em> 23, no. 8 (August 1, 1980): 444–65. <a
 href="https://doi.org/10.1145/358896.358899">https://doi.org/10.1145/358896.358899</a>.
@@ -366,7 +367,7 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn10"><p>It could be that <span
 class="math inline"><em>p</em> = <em>n</em></span>.<a href="#fnref10"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn11"><p><span class="math inline"> ⋅ (<em>n</em>)⋅</span>s are
+<li id="fn11"><p><span class="math inline">⋅(<em>n</em>)⋅</span>s are
 <span class="math inline">⋅</span>line <em>n</em> of the above code
 snippet<span class="math inline">⋅</span>s.<a href="#fnref11"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -388,7 +389,8 @@ role="doc-backlink">↩︎</a></p></li>
 href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
-          </div>
+         </div>
+    </div>
  <div class="footer colorme"><a href="https://bienjensu.github.io">DEUS ABSCONDITUS</a></div>
  <marquee class="quoteblock quoteme colorme" onclick="updateColors()" _="on mousedown halt the event"></marquee>
   </body>
