@@ -46,3 +46,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
