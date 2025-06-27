@@ -47,7 +47,9 @@ var song = Array(
     `if you can find me, you're free to argue as much as you like
 - Primus`,
     `the greatest pain of purgatory is the uncertainty of judgement
-- Blaise Pascal`
+- Blaise Pascal`,
+    `letters have in them all that force which expresses the transports of the heart
+- Héloïse d'Argenteuil`
 )
 
 var newQuote = () => {
